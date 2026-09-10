@@ -4,9 +4,16 @@ from google.adk import Agent, Runner
 from google.adk.sessions.in_memory_session_service import InMemorySessionService
 from google.genai.types import Content, Part
 
+from google.adk.tools.vertex_ai_search_tool import VertexAiSearchTool
 from tools.erp_tool import query_erp_operational
-from tools.other_tools import query_jira_tickets, search_unstructured_docs
+from tools.other_tools import query_jira_tickets
 from tools.bq_tool import query_bigquery_analytics
+
+# Conector do Gemini App (Vertex AI Search Engine)
+vertex_search_tool = VertexAiSearchTool(
+    search_engine_id="projects/cool-ship-415013/locations/global/collections/default_collection/engines/demo_autohub_app",
+    bypass_multi_tools_limit=True
+)
 
 # Configuração do Agente com o Agent Development Kit (ADK)
 copilot_agent = Agent(
@@ -17,10 +24,10 @@ Sua função é auxiliar a diretoria e times operacionais.
 Regras de Resposta:
 1. Sempre tente usar as ferramentas fornecidas para responder à pergunta do usuário, caso tenha relação com Vendas, ERP, Contratos, SLAs, Jira ou Logística.
 2. Ao reportar dados financeiros ou volumes, referencie o identificador do pedido/NF.
-3. Ao auditar contratos, cite expressamente o trecho e o nome do documento.
+3. Ao auditar contratos, utilize a ferramenta de busca nativa do Vertex AI Search (conectada ao seu app). Cite expressamente o trecho e o nome do documento.
 4. Mantenha um tom executivo, preciso e objetivo.
 """,
-    tools=[query_erp_operational, query_jira_tickets, search_unstructured_docs, query_bigquery_analytics]
+    tools=[query_erp_operational, query_jira_tickets, vertex_search_tool, query_bigquery_analytics]
 )
 
 async def main():
