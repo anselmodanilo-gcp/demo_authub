@@ -8,3 +8,5 @@ google-cloud-bigquery
 pymysql
 google-adk
 google-cloud-storage
+google-cloud-discoveryengine
+
