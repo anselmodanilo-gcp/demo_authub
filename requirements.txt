@@ -7,3 +7,4 @@ google-cloud-aiplatform
 google-cloud-bigquery
 pymysql
 google-adk
+google-cloud-storage
