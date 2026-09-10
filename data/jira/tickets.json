@@ -1,0 +1,30 @@
+[
+  {
+    "ticket_id": "OPS-4592",
+    "tipo": "Incidente",
+    "status": "Em Andamento",
+    "prioridade": "Alta",
+    "criado_em": "2026-09-08T10:00:00Z",
+    "descricao": "Atraso na entrega do pedido 9874 para Transportadora Rápido Sudeste. Caminhão retido na barreira fiscal.",
+    "comentarios": [
+      {
+        "autor": "Logistica",
+        "texto": "Aguardando liberação da SEFAZ."
+      }
+    ]
+  },
+  {
+    "ticket_id": "OPS-4598",
+    "tipo": "Qualidade",
+    "status": "Aberto",
+    "prioridade": "Crítica",
+    "criado_em": "2026-09-09T14:30:00Z",
+    "descricao": "Desvio de lote identificado no AutoLub Synth Ultra 5W30. Lote LUB-2609 apresenta viscosidade abaixo do padrão.",
+    "comentarios": [
+      {
+        "autor": "Laboratório",
+        "texto": "Amostra enviada para reanálise."
+      }
+    ]
+  }
+]

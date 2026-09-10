@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+requests
+streamlit
+google-cloud-aiplatform
+google-cloud-bigquery
+pymysql
+google-adk

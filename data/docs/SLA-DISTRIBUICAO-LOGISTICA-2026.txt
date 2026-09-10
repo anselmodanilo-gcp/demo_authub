@@ -1,0 +1,8 @@
+ACORDO DE NÍVEL DE SERVIÇO (SLA) - LOGÍSTICA
+
+Operador Logístico: LogBrasil Express
+
+1. TEMPO DE ENTREGA (LEAD TIME)
+1.1. Região Sudeste: 48 horas úteis.
+1.2. Região Sul: 72 horas úteis.
+1.3. Em caso de atraso superior a 24 horas do prazo estabelecido, incidirá multa de 2% sobre o valor do frete.
